@@ -1,19 +1,25 @@
 local LibStub = LibStub
 local AceAddon = LibStub("AceAddon-3.0")
 local AceLocale = LibStub("AceLocale-3.0")
-local AceDBOptions = LibStub("AceDBOptions-3.0")
-local AceConfig = LibStub("AceConfig-3.0")
-local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 local ControlPanel = AceAddon:GetAddon("ControlPanel")
 local ControlPanel_Options = AceAddon:GetAddon("ControlPanel_Options")
 local L = AceLocale:GetLocale("ControlPanel_Options")
 local string_format = string.format
-local sound_channels = {[24]=string_format(SOUND_CHANNELS_LOW,24),
-					[48]=string_format(SOUND_CHANNELS_MEDIUM,48),
-					[64]=string_format(SOUND_CHANNELS_HIGH,64),
-					[128]=string_format(SOUND_CHANNELS_HIGH,128)}
+local sound_channels
+
+if SOUND_CHANNELS_LOW then
+sound_channels = {[24]=string_format(SOUND_CHANNELS_LOW,24),
+	[48]=string_format(SOUND_CHANNELS_MEDIUM,48),
+	[64]=string_format(SOUND_CHANNELS_HIGH,64),
+	[128]=string_format(SOUND_CHANNELS_HIGH,128)}
+else
+sound_channels = {[24]=string_format("SOUND_CHANNELS_LOW: %d",24),
+	[48]=string_format("SOUND_CHANNELS_MEDIUM: %d",48),
+	[64]=string_format("SOUND_CHANNELS_HIGH: %d",64),
+	[128]=string_format("SOUND_CHANNELS_HIGH: %d",128)}
+
+end
 local Sound_GameSystem_GetNumOutputDrivers = Sound_GameSystem_GetNumOutputDrivers
-local pow = math.pow
 local log = math.log
 
 local function get_output_drivers_table()

@@ -25,7 +25,24 @@ local string_upper = string.upper
 local RestartGx = RestartGx
 local languages = {deDE="deDE",enUS="enUS",esES="esES",esMX="esMX",frFR="frFR",itIT="itIT",koKR="koKR",ptBR="ptBR",ruRU="ruRU",zhCN="zhCN",zhTW="zhTW"}
 local graphicsAPIs = { GetGraphicsAPIs() }
-local resolutions = { GetScreenResolutions() }
+
+local function get_screen_resolutions()
+	local GetScreenResolutions = GetScreenResolutions
+	if GetScreenResolutions then
+		return { GetScreenResolutions() }
+	else
+		local ret = C_VideoOptions.GetGameWindowSizes(1,1)
+		local tb = {}
+		for i=1,#ret do
+			local reti = ret[i]
+			local x,y = reti.x,reti.y
+			tb[i] = x.."x"..y
+		end
+		return tb
+	end
+end
+
+local resolutions = get_screen_resolutions()
 
 --[[local function get_refresh_rates()
 	local refs = { GetRefreshRates() }

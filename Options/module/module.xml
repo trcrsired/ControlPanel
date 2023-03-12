@@ -6,7 +6,6 @@
 	<Script file="Graphics.lua"/>
 	<Script file="Network.lua"/>
 	<Script file="Sound.lua"/>
-	<Script file="Voice.lua"/>
 	<Script file="Script.lua"/>
 	<Script file="Remove.lua"/>
 	<Script file="Instance.lua"/>

@@ -1,9 +1,6 @@
 local LibStub = LibStub
 local AceAddon = LibStub("AceAddon-3.0")
 local AceLocale = LibStub("AceLocale-3.0")
-local AceDBOptions = LibStub("AceDBOptions-3.0")
-local AceConfig = LibStub("AceConfig-3.0")
-local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 local ControlPanel = AceAddon:GetAddon("ControlPanel")
 local ControlPanel_Options = AceAddon:GetAddon("ControlPanel_Options")
 local L = AceLocale:GetLocale("ControlPanel_Options")
@@ -343,7 +340,7 @@ function ControlPanel_Options:CreateGraphics(o)
 							name = SHADOW_QUALITY,
 							desc = OPTION_TOOLTIP_SHADOW_QUALITY,
 							type = "range",
-							min = 1,
+							min = 0,
 							max = 6,
 							step = 1,
 							set = function(info,val)

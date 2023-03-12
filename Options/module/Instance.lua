@@ -13,8 +13,8 @@ end
 
 local temp_settings = {Graphics = ControlPanel_Options:CreateGraphics(get_order()),
 				Network = ControlPanel_Options:CreateNetwork(get_order()),
-				Sound = ControlPanel_Options:CreateSound(get_order()),
-				Voice = ControlPanel_Options:CreateVoice(get_order()),
+--				Sound = ControlPanel_Options:CreateSound(get_order()),
+--				Voice = ControlPanel_Options:CreateVoice(get_order()),
 				Script =  ControlPanel_Options:CreateScript(get_order()),
 				graphicsQuality = 
 				{
