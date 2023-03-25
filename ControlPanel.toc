@@ -1,4 +1,4 @@
-## Interface: 100005
+## interface: 100007
 ## Author: cqwrteur
 ## Title: ControlPanel
 ## SavedVariables: ControlPanelDB
