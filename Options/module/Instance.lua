@@ -1,6 +1,5 @@
 local LibStub = LibStub
 local AceAddon = LibStub("AceAddon-3.0")
-local AceLocale = LibStub("AceLocale-3.0")
 local ControlPanel = AceAddon:GetAddon("ControlPanel")
 local ControlPanel_Options = AceAddon:GetAddon("ControlPanel_Options")
 local L = LibStub("AceLocale-3.0"):GetLocale("ControlPanel_Options")
@@ -37,13 +36,12 @@ local pairs = pairs
 
 local function deep_copy(t)
 	local tb = {}
-	local k,v
 	for k,v in pairs(t) do
 		tb[k] = v
 	end
 	return tb
 end
-				
+
 local settings = deep_copy(temp_settings)
 
 temp_settings.Custom =
