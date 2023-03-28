@@ -1,9 +1,9 @@
 local AceAddon = LibStub("AceAddon-3.0")
 local ControlPanel = AceAddon:GetAddon("ControlPanel")
 local ControlPanel_Options = AceAddon:GetAddon("ControlPanel_Options")
-local setcvar = ControlPanel.SetCVarInstance
 
 function ControlPanel_Options:set_graphics_quality(t,val)
+	local setcvar = ControlPanel.SetCVarInstance
 	if GetGraphicsCVarValueForQualityLevel then
 		for _,v in pairs(ControlPanel_Options.Graphics.args) do
 			if v.type == "group" then
