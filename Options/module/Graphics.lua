@@ -166,6 +166,8 @@ function ControlPanel_Options:CreateGraphics(o)
 						create_range_config_instance_width(OUTLINE_MODE,OPTION_TOOLTIP_OUTLINE_MODE,1,3,1),
 						weatherDensity =
 						create_range_config_instance_width(WEATHER_DETAIL,OPTION_TOOLTIP_WEATHER_DETAIL,1,3,1),
+						graphicsComputeEffects =
+						create_range_config_instance_width(COMPUTE_EFFECTS,OPTION_TOOLTIP_COMPUTE_EFFECTS,0,4,1),
 					}
 				},
 				FPS =
