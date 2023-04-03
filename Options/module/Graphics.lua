@@ -28,8 +28,8 @@ local Graphics =
 	{
 		hdPlayerModels = create_bool_config_instance(SHOW_HD_MODELS_TEXT,OPTION_TOOLTIP_SHOW_HD_MODELS),
 		useUiScale = create_bool_config_instance(USE_UISCALE,OPTION_TOOLTIP_USE_UISCALE),
-		uiScale = create_range_config_instance(UI_SCALE,OPTION_TOOLTIP_UI_SCALE,0,10,1),
-		physicsLevel = create_range_config_instance(UI_SCALE,OPTION_TOOLTIP_UI_SCALE,0,2,1),
+		uiScale = create_range_config_instance(UI_SCALE,OPTION_TOOLTIP_UI_SCALE,0,10),
+		physicsLevel = create_range_config_instance(L["Violence Level"],nil,0,10,1),
 		restartgx =
 		{
 			name = L.restartgx_name,
