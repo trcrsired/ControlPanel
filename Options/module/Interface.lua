@@ -210,7 +210,7 @@ local Interface =
 		},
 		Namesplates =
 		{
-			name = NAMEPLATES_LABEL,
+			name = NAMEPLATES_LABEL or L.Nameplates_name,
 			type = "group",
 			args =
 			{
@@ -320,7 +320,7 @@ local Interface =
 			type = "group",
 			args =
 			{
-				accountAchievements = 
+				accountAchievements = AreAccountAchievementsHidden and
 				{
 					name = SHOW_ACCOUNT_ACHIEVEMENTS,
 					desc = OPTION_TOOLTIP_SHOW_ACCOUNT_ACHIEVEMENTS,
@@ -332,7 +332,7 @@ local Interface =
 						return AreAccountAchievementsHidden()
 					end,
 					width = "full"
-				}
+				} or nil
 			}
 		},
 		Synchronize =
