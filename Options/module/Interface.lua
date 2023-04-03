@@ -265,10 +265,6 @@ local Interface =
 				nameplateMaxDistance =
 				create_range_config(nameplateMaxDistance_name,nameplateMaxDistance_desc),
 				MakeLarger = NameplateMakeLarger_config,
-				raidFramesDisplayDebuffs =
-				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS),
-				raidFramesDisplayOnlyDispellableDebuffs =
-				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS),
 			}
 
 		},
@@ -303,6 +299,19 @@ local Interface =
 				create_bool_config(UNIT_NAME_ENEMY,OPTION_TOOLTIP_UNIT_NAME_ENEMY),
 				nameplateShowSelf =
 				create_bool_config(DISPLAY_PERSONAL_RESOURCE,OPTION_TOOLTIP_DISPLAY_PERSONAL_RESOURCE)	
+			}
+		},
+		RaidFrames =
+		{
+			name = RAID_FRAMES_LABEL,
+			desc = RAID_FRAMES_LABEL,
+			type = "group",
+			args =
+			{
+				raidFramesDisplayDebuffs =
+				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS),
+				raidFramesDisplayOnlyDispellableDebuffs =
+				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS),
 			}
 		},
 		Privacy =
