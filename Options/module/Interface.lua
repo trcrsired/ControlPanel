@@ -265,7 +265,10 @@ local Interface =
 				nameplateMaxDistance =
 				create_range_config(nameplateMaxDistance_name,nameplateMaxDistance_desc),
 				MakeLarger = NameplateMakeLarger_config,
-
+				raidFramesDisplayDebuffs =
+				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYNONBOSSDEBUFFS),
+				raidFramesDisplayOnlyDispellableDebuffs =
+				create_bool_config(COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS,OPTION_TOOLTIP_COMPACT_UNIT_FRAME_PROFILE_DISPLAYONLYDISPELLABLEDEBUFFS),
 			}
 
 		},
