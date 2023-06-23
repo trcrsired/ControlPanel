@@ -1,4 +1,4 @@
-## interface: 100007
+## interface: 100010
 ## Author: cqwrteur
 ## Title: ControlPanel Options
 ## Dependencies: ControlPanel
