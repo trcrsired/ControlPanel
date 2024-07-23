@@ -1,4 +1,4 @@
-## interface: 100200
+## Interface: 110000
 ## Author: cqwrteur
 ## Title: ControlPanel Options
 ## Dependencies: ControlPanel
