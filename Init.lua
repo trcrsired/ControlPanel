@@ -1,5 +1,11 @@
 local ControlPanel = LibStub("AceAddon-3.0"):NewAddon("ControlPanel","AceEvent-3.0","AceConsole-3.0")
 
+local LoadAddOn = C_AddOns.LoadAddOn
+local GetNumAddOns = C_AddOns.GetNumAddOns
+local GetAddOnMetadata = C_AddOns.GetAddOnMetadata
+local IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+local GetAddOnInfo = C_AddOns.GetAddOnInfo
+
 function ControlPanel:OnInitialize()
 	SetCVar("RAIDSettingsEnabled",false)
 	self.db = LibStub("AceDB-3.0"):New("ControlPanelDB",{profile = {}},true)
