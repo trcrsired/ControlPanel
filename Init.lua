@@ -1,5 +1,20 @@
 local ControlPanel = LibStub("AceAddon-3.0"):NewAddon("ControlPanel","AceEvent-3.0","AceConsole-3.0")
 
+if C_AddOns == nil then
+ControlPanel.C_AddOns =
+{
+LoadAddOn = LoadAddOn,
+GetNumAddOns = GetNumAddOns,
+GetAddOnMetadata = GetAddOnMetadata,
+IsAddOnLoaded = IsAddOnLoaded,
+GetAddOnInfo = GetAddOnInfo,
+GetAddOnDependencies = GetAddOnDependencies
+}
+else
+	ControlPanel.C_AddOns = C_AddOns
+end
+
+local C_AddOns = ControlPanel.C_AddOns
 local LoadAddOn = C_AddOns.LoadAddOn
 local GetNumAddOns = C_AddOns.GetNumAddOns
 local GetAddOnMetadata = C_AddOns.GetAddOnMetadata
